@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "bounceable.mixin",
+  "refmap": "mixins.bounceable.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8",
+  "mixins": [
+    "potioncore.PotionCoreEventHandlerMixin"
+  ],
+  "injectors": {
+    "maxShiftBy": 10
+  }
+}

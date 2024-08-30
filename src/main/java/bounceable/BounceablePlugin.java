@@ -2,6 +2,7 @@ package bounceable;
 
 import java.util.Map;
 import fermiumbooter.FermiumRegistryAPI;
+import net.minecraftforge.fml.common.Loader;
 import org.spongepowered.asm.launch.MixinBootstrap;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
@@ -11,6 +12,7 @@ public class BounceablePlugin implements IFMLLoadingPlugin {
 	public BounceablePlugin() {
 		MixinBootstrap.init();
 		FermiumRegistryAPI.enqueueMixin(false, "mixins.bounceable.vanilla.json");
+		FermiumRegistryAPI.enqueueMixin(true, "mixins.bounceable.potioncore.json", () -> Loader.isModLoaded("potioncore"));
 	}
 
 	@Override
