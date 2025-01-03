@@ -21,6 +21,7 @@ public abstract class PotionCoreEventHandlerMixin {
 		if(instance instanceof EntityPlayer) {
 			instance.motionY = Math.max(original, instance.motionY);
 		}
+		else instance.motionY = original;
 	}
 	
 	/**
